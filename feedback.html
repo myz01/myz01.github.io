@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FeedBack</title>
+<link rel="stylesheet" href="feedback.css">
+	
+<script>
+	function checkforblank() {
+		if (document.getElementById('name').value == "") {
+			alert('Name is required for Feedback');
+			return false;
+		}
+		if (document.getElementById('email').value == "") {
+			alert('Email is required for Feedback');
+			return false;
+		}
+		if (document.getElementById('satisfaction').value == "") {
+			alert('Please rate my WebPage');
+			return false;
+		}
+	}
+
+</script>
+</head>
+	
+
+
+<body>
+	
+	<div class="page_wrapper">
+	  <header class="top-header">
+		  <div class="top-banner">
+			  <div id="logo" align="center"><img src="images/OMYZX.png" alt="" width="200">
+			  <h1><font face="ALGERIAN">FEEDBACK</font></h1>
+			  </div>
+		  </div>
+		  <nav class="nav-bar">
+			  <ul><font face="Britannic Bold"><b>
+			  	<li><a href="index.html">HomePage</a></li>
+			  	<li><a href="gameplay.html">GamePlay</a></li>
+			  	<li><a href="feedback.html">FeedBack</a></li>
+			  	<li><a href="contact.html">Contact</a></li> 
+				  </b></font>
+			  </ul>
+		  </nav>
+	  </header>
+	</div>
+	
+	<main class="main">
+	  <section class="feature-images">	
+			<div class="container-feature" >
+				<center>
+				<table border="2" background="images/red animate.gif">
+				<tr>
+					<td align="center"><img src="images/Paypal logo.png" alt="paypal logo" width="250"></td>
+					<td><a id="paypal" href="https://www.paypal.me/myz2001" target="_blank"><img  src="images/donate logo.png" alt="donate through paypal" width="350"></a></td>		
+				</tr>
+				</table><br><br><br>
+				
+				
+				<form name="feedback" method="post" action="feedback.asp" onsubmit="return checkforblank()">
+						
+						Name:<br>
+							<input class="text" type="text" id ="name" name="name"><br><br>
+						
+						Email:<br>
+							<input class="text" type="text" id="email" name="email"><br><br>
+						
+						Pay-Pal ID:<br>
+							<input class="text" type="text"  name="paypal"><br><br>
+						
+						Satisfaction:<br>
+						<select name="satisfaction" id="satisfaction">
+							<option value="">Choose</option>
+							<option value="1">1 star</option>
+							<option value="2">2 star</option>
+							<option value="3">3 star</option>
+							<option value="4">4 star</option>
+							<option value="5">5 star</option>
+						</select><br><br>
+						
+						
+						Most like Gameplay:<br>
+							<input type="checkbox" name="valorant">Valorant
+							<input type="checkbox" name="apexlegends">Apex Legends
+							<input type="checkbox" name="amongus">Among Us
+							<input type="checkbox" name="pummelparty">Pummel Party
+							<br><br>
+						
+						Knows From:<br>
+							<input type="radio" name="from" value="tikTok">TikTok
+							<input type="radio" name="from" value="youtube">Youtube
+							<input type="radio" name="from" value="twitch">Twitch
+							<input type="radio" name="from" value="facebook">Facebook
+							<input type="radio" name="from" value="other">Other<br><br>
+						
+						
+						Comment:<br>
+						<textarea class="text1" name="comment" rows="4" cols="55"></textarea><br><br>
+						
+						<p><input class="submit" type="submit" name="submit" value="submit"></p>
+					</form>
+				<div class="feature">
+					
+				</div>
+				</center>
+			</div>
+		 </section>
+		</main>
+	
+	<footer id="footer" align="center">
+		<h3>Copyright &copy; Muihz 2021</h3>
+	</footer>
+	
+</body>
+</html>
